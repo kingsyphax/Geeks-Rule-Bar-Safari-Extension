@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			var link = null;
+			var title = null;
+			
+			function respondToMessage(messageEvent)
+			{
+				if (messageEvent.name == "setLink")
+				{
+					link = messageEvent.message;
+				}
+				else if (messageEvent.name == "setTitle")
+				{
+					title = messageEvent.message;
+				}
+			}
+			
+			safari.application.addEventListener("message", respondToMessage, false);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
